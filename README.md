@@ -1,4 +1,5 @@
 # tSpitePadder
+Creates ready-to-use sprites for Terraria tiles given a normal sprite. Comes with some additional features .
 
 ## How to use
 Install [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net45-web-installer) if you haven't already, download latest [release (zip or exe)](https://github.com/direwolf420/tSpritePadder/releases), Start it.
@@ -8,3 +9,13 @@ Install [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-fram
 2. Select a target folder
 3. Go
 ```
+
+## Features
+
+* Pad images so they fit the dimensions defined by the cutout, padding and frame count
+* Upscale to x2 pixels due to Terraria convention
+* Flip horizontal/vertical spritesheets
+* Add 2 additional pixel per frame for each bottom row due to Terraria tile convention
+* Save different stages of the padding process if you need to finetune something manually
+
+![image](https://raw.githubusercontent.com/direwolf420/tSpritePadder/master/preview.png)
