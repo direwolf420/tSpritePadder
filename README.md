@@ -23,3 +23,7 @@ Install [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-fram
 Video: [gfycat](https://gfycat.com/scrawnygrimyankolewatusi)
 
 ![image](https://raw.githubusercontent.com/direwolf420/tSpritePadder/master/preview.png)
+
+## Feedback
+
+Terraria Forums page: [Here](https://forums.terraria.org/index.php?threads/tspritepadder-ready-to-use-sprites-for-terraria-tiles.96177/)
