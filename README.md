@@ -1,5 +1,7 @@
 # tSpritePadder
-Creates ready-to-use sprites for Terraria tiles given a normal sprite. Comes with some additional features.
+![icon](https://raw.githubusercontent.com/direwolf420/tSpritePadder/master/icon_64x64.png)
+
+Creates ready-to-use sprites for Terraria tiles given a normal sprite. Comes with some additional features. Windows only.
 
 ## How to use
 Install [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net45-web-installer) if you haven't already, download latest [release (zip or exe)](https://github.com/direwolf420/tSpritePadder/releases), Start it.
