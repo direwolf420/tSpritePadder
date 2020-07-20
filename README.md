@@ -1,4 +1,4 @@
-# tSpitePadder
+# tSpritePadder
 Creates ready-to-use sprites for Terraria tiles given a normal sprite. Comes with some additional features .
 
 ## How to use
