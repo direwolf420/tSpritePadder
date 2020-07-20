@@ -7,7 +7,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace tTilePadder
+namespace tSpritePadder
 {
     public partial class tSpritePadderWindow : Form
     {
