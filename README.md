@@ -18,4 +18,6 @@ Install [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-fram
 * Add 2 additional pixel per frame for each bottom row due to Terraria tile convention
 * Save different stages of the padding process if you need to finetune something manually
 
+Video: [gfycat](https://gfycat.com/scrawnygrimyankolewatusi)
+
 ![image](https://raw.githubusercontent.com/direwolf420/tSpritePadder/master/preview.png)
