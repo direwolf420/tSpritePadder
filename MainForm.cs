@@ -381,22 +381,23 @@ namespace tSpritePadder
 			UpdateImages();
 		}
 
-		private void ShowImage(PictureBox pictureBox)
+		private void ShowImage(PictureBox pictureBox, string text)
 		{
 			ImageForm imageForm = new ImageForm();
 			imageForm.Image.Image = pictureBox.Image;
 			imageForm.Image.BackColor = pictureBox.BackColor;
+			imageForm.Text = text;
 			imageForm.ShowDialog();
 		}
 
 		private void InputImage_Click(object sender, EventArgs e)
 		{
-			ShowImage(InputImage);
+			ShowImage(InputImage, InputImageLabel.Text);
 		}
 
 		private void OutputImage_Click(object sender, EventArgs e)
 		{
-			ShowImage(OutputImage);
+			ShowImage(OutputImage, OutputImageLabel.Text);
 		}
 
 		private void TargetFolderButton_Click(object sender, EventArgs e)
