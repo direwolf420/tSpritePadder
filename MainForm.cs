@@ -283,6 +283,7 @@ namespace tSpritePadder
 			{
 				InputImage.Image = InputImage.InitialImage;
 			}
+			InputImageLabel.Text = $"Input: {next.Width}x{next.Height}";
 
 			if (Upscale2.Checked)
 			{
@@ -477,7 +478,6 @@ namespace tSpritePadder
 			string fileName = strings.Last();
 			InputLabel.Text = fileName;
 			InputImage.Image = Image.FromFile(ImageSelectDialog.FileName);
-			InputImageLabel.Text = $"Input: {InputImage.Image.Width}x{InputImage.Image.Height}";
 			UpdateImages();
 		}
 
