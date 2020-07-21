@@ -27,3 +27,8 @@ Video: [gfycat](https://gfycat.com/scrawnygrimyankolewatusi)
 ## Feedback
 
 Terraria Forums page: [Here](https://forums.terraria.org/index.php?threads/tspritepadder-ready-to-use-sprites-for-terraria-tiles.96177/)
+
+## Changelogs
+
+### v1.0.1
+* Improvements to the image previews, separate windows now update with each change
