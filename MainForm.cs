@@ -19,6 +19,10 @@ namespace tSpritePadder
 
 		private Bitmap finalBitmap = null;
 
+		private ImageForm InputImageForm;
+
+		private ImageForm OutputImageForm;
+
 		private RadioButton selectedPaddingColor;
 
 		private Color PaddingColor => selectedPaddingColor?.Equals(PaddingColorTransparent) == true ? Color.Transparent : Color.Violet;
@@ -285,6 +289,8 @@ namespace tSpritePadder
 			}
 			InputImageLabel.Text = $"Input: {next.Width}x{next.Height}";
 
+			FeedImageForm(InputImageForm, InputImage, InputImageLabel.Text);
+
 			if (Upscale2.Checked)
 			{
 				next = UpscaleImage(next);
@@ -301,10 +307,12 @@ namespace tSpritePadder
 			OutputImage.Image = final;
 			OutputImageLabel.Text = $"Output: {OutputImage.Image.Width}x{OutputImage.Image.Height}";
 
+			FeedImageForm(OutputImageForm, OutputImage, OutputImageLabel.Text);
+
 			//Example:
-			//static : 3 x 1 frames
-			//no Flip: 15 x 2
-			//Flipped: 5 x 6
+			//Static : 3 x 1 frames
+			//No flip: 15 x 2
+			//flipped: 5 x 6
 			//Result should always be 5 x 2 
 			int horizontalCuts = !FlipDimensions.Checked ? cutoutCountX : cutoutCountX * (int)HorizontalCountNumber.Value;
 			int verticalCuts = !FlipDimensions.Checked ? cutoutCountY : cutoutCountY / (int)HorizontalCountNumber.Value;
@@ -381,23 +389,42 @@ namespace tSpritePadder
 			UpdateImages();
 		}
 
-		private void ShowImage(PictureBox pictureBox, string text)
+		private void HandleImageForm(ref ImageForm imageForm, PictureBox pictureBox, string text)
 		{
-			ImageForm imageForm = new ImageForm();
+			if (imageForm == null || !imageForm.Visible)
+			{
+				imageForm?.Close();
+				imageForm = new ImageForm();
+				FeedImageForm(imageForm, pictureBox, text);
+				imageForm.Show(this);
+			}
+			else
+			{
+				if (imageForm.Visible)
+				{
+					int a = 0;
+				}
+				imageForm.Close();
+				imageForm = null;
+			}
+		}
+
+		private void FeedImageForm(ImageForm imageForm, PictureBox pictureBox, string text)
+		{
+			if (imageForm == null) return;
 			imageForm.Image.Image = pictureBox.Image;
 			imageForm.Image.BackColor = pictureBox.BackColor;
 			imageForm.Text = text;
-			imageForm.ShowDialog();
 		}
 
 		private void InputImage_Click(object sender, EventArgs e)
 		{
-			ShowImage(InputImage, InputImageLabel.Text);
+			HandleImageForm(ref InputImageForm, InputImage, InputImageLabel.Text);
 		}
 
 		private void OutputImage_Click(object sender, EventArgs e)
 		{
-			ShowImage(OutputImage, OutputImageLabel.Text);
+			HandleImageForm(ref OutputImageForm, OutputImage, OutputImageLabel.Text);
 		}
 
 		private void TargetFolderButton_Click(object sender, EventArgs e)
@@ -521,6 +548,8 @@ namespace tSpritePadder
 			{
 				InputImage.BackColor = colorDialog1.Color;
 				OutputImage.BackColor = colorDialog1.Color;
+
+				UpdateImages();
 			}
 		}
 
